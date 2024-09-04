@@ -14,12 +14,13 @@ export default function AddItemScreen() {
     }
   };
 
-  return;
-  <View style={styles.container}>
-    <Text>Add a new item to your list</Text>
-    <TextInput placeholder="Enter item name" value={text} onChangeText={setText} />
-    <Button title="Add Item" onPress={addItem} />
-  </View>;
+  return (
+    <View style={styles.container}>
+      <Text>Add a new item to your list</Text>
+      <TextInput placeholder="Enter item name" value={text} onChangeText={setText} />
+      <Button title="Add Item" onPress={addItem} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
