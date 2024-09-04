@@ -1,25 +1,14 @@
 // screens/AddItemScreen.js
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Button, TextInput } from "react-native-web";
 
 export default function AddItemScreen() {
-  const [text, setText] = React.useState("");
-  const [list, setList] = React.useState([]);
-
-  const addItem = () => {
-    if (text) {
-      setList([...list, text]);
-      setText("");
-    }
-  };
-
-  return;
-  <View style={styles.container}>
-    <Text>Add a new item to your list</Text>
-    <TextInput placeholder="Enter item name" value={text} onChangeText={setText} />
-    <Button title="Add Item" onPress={addItem} />
-  </View>;
+  return (
+    <View style={styles.container}>
+      <Text>Add a new item to your list</Text>
+    
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -28,5 +17,19 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  pressable: {
+    backgroundColor: "grey",
+    padding: 10,
+    borderRadius: 5,
+    margin: 10,
+    width: 100,
+  },
+  textinput: {
+    borderColor: "black",
+    borderWidth: 1,
+    padding: 10,
+    margin: 10,
+    width: 200,
   },
 });
